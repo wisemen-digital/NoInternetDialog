@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dialog_width">320dp</dimen>
+    <dimen name="dialog_height">450dp</dimen>
+    <dimen name="dialog_padding">10dp</dimen>
+
+    <dimen name="margin_x_small">5dp</dimen>
+    <dimen name="margin_small">10dp</dimen>
+    <dimen name="margin_medium">15dp</dimen>
+    <dimen name="margin_large">20dp</dimen>
+    <dimen name="margin_x_large">25dp</dimen>
+    <dimen name="margin_xx_large">30dp</dimen>
+    <dimen name="margin_xxx_large">40dp</dimen>
+    <dimen name="margin_xxxx_large">60dp</dimen>
+    <dimen name="margin_xxxxx_large">90dp</dimen>
+    <dimen name="button_size">36dp</dimen>
+    <dimen name="button_text_size">12sp</dimen>
+</resources>

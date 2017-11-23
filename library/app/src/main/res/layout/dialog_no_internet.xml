@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dialog_width"
+    android:layout_height="@dimen/dialog_height">
+
+    <FrameLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_medium">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/moon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_xxxxx_large"
+            android:layout_marginTop="@dimen/margin_xx_large"
+            android:scaleType="centerInside"
+            android:visibility="gone"
+            app:srcCompat="@drawable/moon" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="@dimen/margin_small"
+            app:srcCompat="@drawable/ic_cancel_white_24dp" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/plane"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:background="?selectableItemBackground"
+            android:padding="@dimen/margin_medium"
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/plane" />
+    </FrameLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/top_guide"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.34" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/bottom_guide"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.92" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/center_horizontal_guide"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/start_guide"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/end_guide"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/center_vertical_guide"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/ghost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/margin_small"
+        android:paddingStart="@dimen/margin_small"
+        android:paddingTop="@dimen/margin_medium"
+        android:scaleType="centerInside"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_guide"
+        app:srcCompat="@drawable/ghost" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/tomb"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_guide"
+        app:srcCompat="@drawable/tomb" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/ground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/center_horizontal_guide" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/pumpkin"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/tomb"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/tomb"
+        app:srcCompat="@drawable/pumpkin" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/wifi_indicator"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:alpha="0.5"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@id/tomb"
+        app:layout_constraintEnd_toEndOf="@id/tomb"
+        app:layout_constraintStart_toStartOf="@id/tomb"
+        app:layout_constraintTop_toTopOf="@id/tomb"
+        app:srcCompat="@drawable/ic_no_wifi" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/no_internet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingEnd="@dimen/margin_medium"
+        android:paddingStart="@dimen/margin_medium"
+        android:paddingTop="@dimen/margin_small"
+        android:text="@string/no_internet_title"
+        android:textAllCaps="true"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/end_guide"
+        app:layout_constraintStart_toStartOf="@id/start_guide"
+        app:layout_constraintTop_toBottomOf="@id/tomb" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/no_internet_body"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_x_small"
+        android:alpha="0.7"
+        android:ellipsize="end"
+        android:fontFamily="@font/montserrat_regular"
+        android:gravity="center_horizontal"
+        android:maxLines="2"
+        android:paddingEnd="@dimen/margin_medium"
+        android:paddingStart="@dimen/margin_medium"
+        android:text="@string/no_internet_body"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/end_guide"
+        app:layout_constraintStart_toStartOf="@id/start_guide"
+        app:layout_constraintTop_toBottomOf="@id/no_internet" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/turn_on"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:alpha="0.7"
+        android:ellipsize="end"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:paddingBottom="@dimen/margin_small"
+        android:paddingEnd="@dimen/margin_medium"
+        android:paddingStart="@dimen/margin_medium"
+        android:text="@string/turn_on"
+        android:textAllCaps="true"
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/wifi_on"
+        app:layout_constraintEnd_toEndOf="@id/end_guide"
+        app:layout_constraintStart_toStartOf="@id/start_guide" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/wifi_on"
+        style="@style/roundedButton"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_size"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:drawableLeft="@drawable/ic_wifi_white"
+        android:drawableStart="@drawable/ic_wifi_white"
+        android:fontFamily="@font/montserrat_light"
+        android:text="@string/wifi_on"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guide"
+        app:layout_constraintEnd_toStartOf="@id/center_vertical_guide"
+        app:layout_constraintStart_toStartOf="@id/start_guide" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/mobile_on"
+        style="@style/roundedButton"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_size"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginStart="@dimen/margin_small"
+        android:drawableLeft="@drawable/ic_4g_white"
+        android:drawableStart="@drawable/ic_4g_white"
+        android:fontFamily="@font/montserrat_light"
+        android:text="@string/mobile"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guide"
+        app:layout_constraintEnd_toEndOf="@id/end_guide"
+        app:layout_constraintStart_toEndOf="@id/center_vertical_guide" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/airplane_off"
+        style="@style/roundedButton"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_size"
+        android:drawableLeft="@drawable/ic_airplane_off"
+        android:drawableStart="@drawable/ic_airplane_off"
+        android:fontFamily="@font/montserrat_light"
+        android:text="@string/airplane"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/button_text_size"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guide"
+        app:layout_constraintEnd_toEndOf="@id/end_guide"
+        app:layout_constraintStart_toStartOf="@id/start_guide" />
+</android.support.constraint.ConstraintLayout>

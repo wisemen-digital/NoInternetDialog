@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">No Internet Dialog</string>
+    <string name="no_internet_title">No Internet</string>
+    <string name="no_internet_body">You are not connected to the Internet</string>
+    <string name="wifi_on">Wifi</string>
+    <string name="mobile">Mobile data</string>
+    <string name="airplane">Airplane mode</string>
+    <string name="turn_on">Please turn on</string>
+    <string name="turn_off">Please turn off</string>
+    <string name="airplane_on">You have turned on the airplane mode.</string>
+</resources>

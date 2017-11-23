@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorNoInternetGradStart">#633ea5</color>
+    <color name="colorNoInternetGradCenter">#4b307c</color>
+    <color name="colorNoInternetGradEnd">#39245e</color>
+    <color name="colorNoInternetGradStartH">#ffd07f</color>
+    <color name="colorNoInternetGradCenterH">#f8931d</color>
+    <color name="colorNoInternetGradEndH">#c46137</color>
+</resources>
