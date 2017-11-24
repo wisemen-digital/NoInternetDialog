@@ -2,7 +2,7 @@
 
 A beautiful Dialog which appears when you have lost your Internet connection.
 
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-No%20Internet%20Dialog-yellow.svg?style=flat-square)](https://android-arsenal.com/details/1/6493) [![API](https://img.shields.io/badge/API-14%2B-yellowgreen.svg?style=flat-square)](https://android-arsenal.com/api?level=14)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-No%20Internet%20Dialog-yellow.svg?style=flat-square)](https://android-arsenal.com/details/1/6493) [![API](https://img.shields.io/badge/API-14%2B-yellow.svg?style=flat-square)](https://android-arsenal.com/api?level=14)
 
 ## Setup
 
