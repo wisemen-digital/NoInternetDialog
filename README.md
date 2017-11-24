@@ -48,5 +48,9 @@ Customize the dialog with ease
 ```
 
 |![alt text](https://github.com/appwise-labs/NoInternetDialog/blob/master/Images/Screenshot_20171123-161024.jpg)|![alt text](https://github.com/appwise-labs/NoInternetDialog/blob/master/Images/Screenshot_20171123-161157.jpg)|
+|----------------------------------------------------------------------------------------------|-----------|
+
+
 |![alt text](https://github.com/appwise-labs/NoInternetDialog/blob/master/Images/niam.gif)|![alt text](https://github.com/appwise-labs/NoInternetDialog/blob/master/Images/ninm.gif)|
+|----------------------------------------------------------------------------------------------|-----------|
 
