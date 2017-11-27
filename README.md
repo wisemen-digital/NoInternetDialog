@@ -11,7 +11,7 @@ A beautiful Dialog which appears when you have lost your Internet connection.
 Add following line of code to your module(app) level gradle file
 
 ```java
-    implementation 'am.appwise.components:NoInternetDialog:1.0.1'
+    implementation 'am.appwise.components:NoInternetDialog:1.1.0'
 ```
 
 #### Maven:
@@ -20,7 +20,7 @@ Add following line of code to your module(app) level gradle file
   <dependency>
     <groupId>am.appwise.components</groupId>
     <artifactId>NoInternetDialog</artifactId>
-    <version>1.0.1</version>
+    <version>1.1.0</version>
     <type>pom</type>
   </dependency>
 ```
@@ -48,6 +48,10 @@ Customize the dialog with ease
   builder.setDialogRadius() // Set custom radius for background gradient
   builder.setTitleTypeface() // Set custom typeface for title text
   builder.setMessageTypeface() // Set custom typeface for message text
+  builder.setButtonColor() // Set custom color for dialog buttons
+  builder.setButtonTextColor() // Set custom text color for dialog buttons
+  builder.setButtonIconsColor() // Set custom color for icons of dialog buttons
+  builder.setWifiLoaderColor() // Set custom color for wifi loader
 ```
 
 |![alt text](https://github.com/appwise-labs/NoInternetDialog/blob/master/Images/Screenshot_20171123-161024.jpg)|![alt text](https://github.com/appwise-labs/NoInternetDialog/blob/master/Images/Screenshot_20171123-161157.jpg)|
@@ -57,6 +61,11 @@ Customize the dialog with ease
 |----------------------------------------------------------------------------------------------|-----------|
 
 ## Versions
+
+#### 1.1.0
+
+New customization features added
+Issues fixed
 
 #### 1.0.1
 
