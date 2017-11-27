@@ -14,5 +14,9 @@
     <dimen name="margin_xxxx_large">60dp</dimen>
     <dimen name="margin_xxxxx_large">90dp</dimen>
     <dimen name="button_size">36dp</dimen>
+    <dimen name="button_size2">38dp</dimen>
+    <dimen name="progress_size">47dp</dimen>
+    <dimen name="button_width">118dp</dimen>
+
     <dimen name="button_text_size">12sp</dimen>
 </resources>
