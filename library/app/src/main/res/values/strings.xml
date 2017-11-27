@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">No Internet Dialog</string>
     <string name="no_internet_title">No Internet</string>
     <string name="no_internet_body">You are not connected to the Internet</string>
     <string name="wifi_on">Wifi</string>
