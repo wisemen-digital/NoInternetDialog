@@ -11,7 +11,7 @@ A beautiful Dialog which appears when you have lost your Internet connection.
 Add following line of code to your module(app) level gradle file
 
 ```java
-    implementation 'am.appwise.components:NoInternetDialog:1.1.0'
+    implementation 'am.appwise.components:NoInternetDialog:1.1.1'
 ```
 
 #### Maven:
@@ -20,7 +20,7 @@ Add following line of code to your module(app) level gradle file
   <dependency>
     <groupId>am.appwise.components</groupId>
     <artifactId>NoInternetDialog</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
     <type>pom</type>
   </dependency>
 ```
@@ -60,7 +60,16 @@ Customize the dialog with ease
 |![alt text](https://github.com/appwise-labs/NoInternetDialog/blob/master/Images/niam.gif)|![alt text](https://github.com/appwise-labs/NoInternetDialog/blob/master/Images/ninm.gif)|
 |----------------------------------------------------------------------------------------------|-----------|
 
+This is work is is inspired from the work of Ramakrishna V. in Dribbble.
+
+(https://dribbble.com/shots/2887886-No-internet-connection-GIF)
+
 ## Versions
+
+#### 1.1.1
+
+Vector drawable issue fixed for < API 21
+UI issues fixed for small devices
 
 #### 1.1.0
 
