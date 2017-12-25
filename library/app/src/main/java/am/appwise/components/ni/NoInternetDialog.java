@@ -122,6 +122,7 @@ public class NoInternetDialog extends Dialog implements View.OnClickListener, Co
     private boolean isWifiOn;
     private int direction;
     private WifiReceiver wifiReceiver;
+    private NetworkStatusReceiver networkStatusReceiver;
     private ObjectAnimator wifiAnimator;
 
     private NoInternetDialog(@NonNull Context context, int bgGradientStart, int bgGradientCenter, int bgGradientEnd,
@@ -179,7 +180,7 @@ public class NoInternetDialog extends Dialog implements View.OnClickListener, Co
         wifiReceiver = new WifiReceiver();
         context.registerReceiver(wifiReceiver, new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
 
-        NetworkStatusReceiver networkStatusReceiver = new NetworkStatusReceiver();
+        networkStatusReceiver = new NetworkStatusReceiver();
         context.registerReceiver(networkStatusReceiver, new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
 
         wifiReceiver.setConnectionListener(this);
@@ -612,6 +613,11 @@ public class NoInternetDialog extends Dialog implements View.OnClickListener, Co
         if (ghost != null) {
             ghost.setTranslationY(1f);
         }
+    }
+
+    public void onDestroy() {
+        getContext().unregisterReceiver(wifiReceiver);
+        getContext().unregisterReceiver(networkStatusReceiver);
     }
 
     public static class Builder {
