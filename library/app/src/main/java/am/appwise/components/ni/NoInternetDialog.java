@@ -117,6 +117,7 @@ public class NoInternetDialog extends Dialog implements View.OnClickListener, Co
     private int buttonTextColor;
     private int buttonIconsColor;
     private int wifiLoaderColor;
+    private boolean cancelable;
 
     private boolean isHalloween;
     private boolean isWifiOn;
@@ -124,11 +125,13 @@ public class NoInternetDialog extends Dialog implements View.OnClickListener, Co
     private WifiReceiver wifiReceiver;
     private NetworkStatusReceiver networkStatusReceiver;
     private ObjectAnimator wifiAnimator;
+    private ConnectionCallback connectionCallback;
 
     private NoInternetDialog(@NonNull Context context, int bgGradientStart, int bgGradientCenter, int bgGradientEnd,
                              int bgGradientOrientation, int bgGradientType, float dialogRadius,
                              @Nullable Typeface titleTypeface, @Nullable Typeface messageTypeface,
-                             int buttonColor, int buttonTextColor, int buttonIconsColor, int wifiLoaderColor) {
+                             int buttonColor, int buttonTextColor, int buttonIconsColor, int wifiLoaderColor,
+                             boolean cancelable) {
         super(context);
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
 
@@ -173,6 +176,8 @@ public class NoInternetDialog extends Dialog implements View.OnClickListener, Co
                 ? ContextCompat.getColor(getContext(), R.color.colorWhite)
                 : wifiLoaderColor;
 
+        this.cancelable = cancelable;
+
         initReceivers(context);
     }
 
@@ -202,6 +207,7 @@ public class NoInternetDialog extends Dialog implements View.OnClickListener, Co
         initAnimations();
         initTypefaces();
         initWifiLoading();
+        initClose();
     }
 
     private void initMainWindow() {
@@ -457,6 +463,11 @@ public class NoInternetDialog extends Dialog implements View.OnClickListener, Co
         ViewCompat.setElevation(wifiLoading, 10);
     }
 
+    private void initClose() {
+        setCancelable(cancelable);
+        close.setVisibility(cancelable ? View.VISIBLE : View.GONE);
+    }
+
     @Override
     public void onClick(View view) {
         int id = view.getId();
@@ -489,8 +500,8 @@ public class NoInternetDialog extends Dialog implements View.OnClickListener, Co
         });
         ObjectAnimator translateXAnimatorWifi = ObjectAnimator.ofFloat(wifiOn, "translationX", 1f, 110f);
         ObjectAnimator translateYAnimatorWifi = ObjectAnimator.ofFloat(wifiOn, "translationY", 1f, 0f);
-        ObjectAnimator translateXAnimatorLoading = ObjectAnimator.ofFloat(wifiLoading, "translationX", 1f, 100f);
-        ObjectAnimator translateYAnimatorLoading = ObjectAnimator.ofFloat(wifiLoading, "translationY", 1f, -12f);
+        ObjectAnimator translateXAnimatorLoading = ObjectAnimator.ofFloat(wifiLoading, "translationX", 1f, 104f);
+        ObjectAnimator translateYAnimatorLoading = ObjectAnimator.ofFloat(wifiLoading, "translationY", 1f, -10f);
 
         ValueAnimator textSizeAnimator = ValueAnimator.ofFloat(13f, 0f);
         textSizeAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -620,6 +631,10 @@ public class NoInternetDialog extends Dialog implements View.OnClickListener, Co
         getContext().unregisterReceiver(networkStatusReceiver);
     }
 
+    public void setConnectionCallback(ConnectionCallback connectionCallback) {
+        this.connectionCallback = connectionCallback;
+    }
+
     public static class Builder {
         private Context context;
         private int bgGradientStart;
@@ -634,6 +649,8 @@ public class NoInternetDialog extends Dialog implements View.OnClickListener, Co
         private int buttonTextColor;
         private int buttonIconsColor;
         private int wifiLoaderColor;
+        private ConnectionCallback connectionCallback;
+        private boolean cancelable;
 
         public Builder(Context context) {
             this.context = context;
@@ -725,10 +742,23 @@ public class NoInternetDialog extends Dialog implements View.OnClickListener, Co
             return this;
         }
 
+        public Builder setConnectionCallback(ConnectionCallback callback) {
+            this.connectionCallback = callback;
+            return this;
+        }
+
+        public Builder setCancelable(boolean cancelable) {
+            this.cancelable = cancelable;
+            return this;
+        }
+
         public NoInternetDialog build() {
-            return new NoInternetDialog(context, bgGradientStart, bgGradientCenter, bgGradientEnd,
+            NoInternetDialog dialog = new NoInternetDialog(context, bgGradientStart, bgGradientCenter, bgGradientEnd,
                     bgGradientOrientation, bgGradientType, dialogRadius, titleTypeface, messageTypeface,
-                    buttonColor, buttonTextColor, buttonIconsColor, wifiLoaderColor);
+                    buttonColor, buttonTextColor, buttonIconsColor, wifiLoaderColor, cancelable);
+            dialog.setConnectionCallback(connectionCallback);
+
+            return dialog;
         }
     }
 }
