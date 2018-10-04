@@ -28,7 +28,7 @@ public class NoInternetUtils {
 
     static boolean hasActiveInternetConnection(Context context) {
         try {
-            HttpURLConnection urlc = (HttpURLConnection) (new URL("http://www.google.com").openConnection());
+            HttpURLConnection urlc = (HttpURLConnection) (new URL("https://www.google.com").openConnection());
             urlc.setRequestProperty("User-Agent", "Test");
             urlc.setRequestProperty("Connection", "close");
             urlc.setConnectTimeout(1500);
