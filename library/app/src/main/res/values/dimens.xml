@@ -19,4 +19,5 @@
     <dimen name="button_width">118dp</dimen>
 
     <dimen name="button_text_size">12sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

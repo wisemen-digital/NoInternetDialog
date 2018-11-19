@@ -7,4 +7,5 @@
     <string name="turn_on">Please turn on</string>
     <string name="turn_off">Please turn off</string>
     <string name="airplane_on">You have turned on the airplane mode.</string>
+    <string name="title_activity_test">TestActivity</string>
 </resources>
