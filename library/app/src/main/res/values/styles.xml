@@ -13,13 +13,4 @@
         <item name="android:textSize">12sp</item>
     </style>
 
-    <style name="NoInternetTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-
-    <style name="NoInternetTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="NoInternetTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
 </resources>
