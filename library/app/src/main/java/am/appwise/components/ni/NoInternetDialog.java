@@ -566,6 +566,8 @@ public class NoInternetDialog extends Dialog implements View.OnClickListener, Co
 
     @Override
     public void hasActiveConnection(boolean hasActiveConnection) {
+        if(this.connectionCallback != null)
+            this.connectionCallback.hasActiveConnection(hasActiveConnection);
         if (!hasActiveConnection) {
             showDialog();
         } else {
@@ -627,8 +629,12 @@ public class NoInternetDialog extends Dialog implements View.OnClickListener, Co
     }
 
     public void onDestroy() {
-        getContext().unregisterReceiver(wifiReceiver);
-        getContext().unregisterReceiver(networkStatusReceiver);
+        try {
+            getContext().unregisterReceiver(networkStatusReceiver);
+        }catch(Exception e){ }
+        try {
+            getContext().unregisterReceiver(wifiReceiver);
+        }catch (Exception e){}
     }
 
     public void setConnectionCallback(ConnectionCallback connectionCallback) {
