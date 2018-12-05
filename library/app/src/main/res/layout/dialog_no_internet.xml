@@ -257,4 +257,14 @@
         app:layout_constraintBottom_toBottomOf="@id/bottom_guide"
         app:layout_constraintEnd_toEndOf="@id/end_guide"
         app:layout_constraintStart_toStartOf="@id/start_guide" />
+
+    <ProgressBar
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/wifi_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </android.support.constraint.ConstraintLayout>

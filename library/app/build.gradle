@@ -1,5 +1,5 @@
-apply plugin: 'com.android.library'
 apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 27
@@ -22,6 +22,10 @@ android {
             }
         }
     }
+		compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -37,7 +41,7 @@ dependencies {
 publish {
     groupId = 'am.appwise.components'
     artifactId = 'NoInternetDialog'
-    publishVersion = '1.0.1'
+    publishVersion = '1.1.4'
     desc = 'A beautiful Dialog which appears when you have lost your internet connection'
     licences = ['Apache-2.0']
     website = 'https://github.com/appwise-labs/NoInternetDialog'
