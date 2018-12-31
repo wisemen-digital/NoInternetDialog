@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="@dimen/dialog_width"
     android:layout_height="@dimen/dialog_height">
 
@@ -257,4 +258,14 @@
         app:layout_constraintBottom_toBottomOf="@id/bottom_guide"
         app:layout_constraintEnd_toEndOf="@id/end_guide"
         app:layout_constraintStart_toStartOf="@id/start_guide" />
+
+    <ProgressBar
+        android:id="@+id/wifi_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_guide"
+        app:layout_constraintEnd_toEndOf="@+id/wifi_on"
+        app:layout_constraintStart_toStartOf="@+id/wifi_on"
+        app:layout_constraintTop_toTopOf="@+id/wifi_on" />
 </android.support.constraint.ConstraintLayout>
